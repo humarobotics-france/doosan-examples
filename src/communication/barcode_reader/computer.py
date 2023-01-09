@@ -19,6 +19,7 @@ limitations under the License.
 # source: https://python.doctor/page-reseaux-sockets-python-port
 import socket
 import threading
+from time import sleep
 
 class ClientThread(threading.Thread):
 
@@ -92,6 +93,7 @@ class ClientThread(threading.Thread):
         while True:
             barcode = input("Barcode: ")
             self.send(barcode)
+            sleep(1)
 
 
 def main():
